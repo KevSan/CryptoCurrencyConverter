@@ -1,4 +1,6 @@
-dict_of_crypto_currencies = {"LiteCoin" : "ltc",
+from requests.structures import CaseInsensitiveDict
+
+cid_of_crypto = CaseInsensitiveDict({"LiteCoin" : "ltc",
                              "Dash" : "dash",
                              "BitConnect Coin": "bcc",
                              "Koruna" : "koruna",
@@ -56,10 +58,18 @@ dict_of_crypto_currencies = {"LiteCoin" : "ltc",
                              "Karma" : "karm",
                              "Global Currency Reserve" : "gcr",
                              "ECCoin" : "ecc",
-                             
-                             }
+                             "BitBean" : "bitb",
+                             "Dnotes" : "note",
+                             })
 
-for key in dict_of_crypto_currencies:
-    print(key, ":", dict_of_crypto_currencies[key])
+def print_dict():
+    for key in cid_of_crypto:
+        print(key, ":", cid_of_crypto[key])
 
-print("LiteCoin" in dict_of_crypto_currencies.values())
+def key_in_dict_check(key):
+    return(cid_of_crypto.__contains__(key))
+
+def val_in_dict_check(val):
+    return(val in cid_of_crypto.values())
+    #must be lower case letter
+
