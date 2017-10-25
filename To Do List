@@ -1,0 +1,5 @@
+- Need to find api for Bitcoin, Bitcoin Cash, and Etherium Prices
+- Need to add the above currency name and api call to the dictionary
+- Need to add check in converter file that checks if input is a name of a ticker name
+- Start researching a gui framework
+- Add functionality that makes ticker name inputs lower case
